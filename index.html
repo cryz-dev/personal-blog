@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Limberg</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 48px;
+            padding-top: 20px;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+        }
+
+        nav a.active {
+            color: #1a1a1a;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .portrait {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 32px;
+            background: #e0e0e0;
+        }
+
+        .bio {
+            margin-bottom: 32px;
+        }
+
+        .bio p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .bio ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .bio ul li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .bio ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        .bio ul li a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .bio ul li a:hover {
+            border-bottom-color: #1a1a1a;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            margin-top: 48px;
+        }
+
+        .blog-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .blog-list li {
+            margin-bottom: 24px;
+        }
+
+        .blog-list a {
+            display: block;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        .blog-list a:hover .blog-title {
+            color: #666;
+        }
+
+        .blog-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            transition: color 0.2s;
+        }
+
+        .blog-date {
+            font-size: 14px;
+            color: #999;
+        }
+
+        footer {
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="active">home</a>
+        <a href="/blog">blog</a>
+    </nav>
+
+    <h1>Chris Limberg</h1>
+
+    <img src="/portrait.jpg" alt="Chris Limberg portrait" class="portrait">
+
+    <div class="bio">
+        <p>Chris Limberg is a multidisciplinary maker passionate about bringing useful ideas to life.</p>
+        
+        <ul>
+            <li>Software engineer building things that matter</li>
+            <li>Learning and growing every day</li>
+            <li>Based in the intersection of technology and creativity</li>
+        </ul>
+
+        <p>Working at the intersection of technology, design, and creative expression, Chris lives by the mantra of "do what excites you most".</p>
+    </div>
+
+    <div class="section-title">Recent Writing</div>
+
+    <ul class="blog-list">
+        <li>
+            <a href="/blog/hello-world">
+                <div class="blog-title">Hello World</div>
+                <div class="blog-date">Feb 19, 2026</div>
+            </a>
+        </li>
+    </ul>
+
+    <footer>
+        <p>© 2026 Chris Limberg</p>
+    </footer>
+</body>
+</html>
