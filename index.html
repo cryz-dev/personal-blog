@@ -14,7 +14,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
+            color: #ffffff;
+            background: #000000;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -28,18 +29,18 @@
         }
 
         nav a {
-            color: #666;
+            color: #888;
             text-decoration: none;
             font-size: 14px;
             transition: color 0.2s;
         }
 
         nav a:hover {
-            color: #1a1a1a;
+            color: #ffffff;
         }
 
         nav a.active {
-            color: #1a1a1a;
+            color: #ffffff;
         }
 
         h1 {
@@ -50,12 +51,12 @@
         }
 
         .portrait {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            border-radius: 0;
             object-fit: cover;
             margin-bottom: 32px;
-            background: #e0e0e0;
+            background: #333;
         }
 
         .bio {
@@ -66,6 +67,38 @@
             margin-bottom: 16px;
             font-size: 16px;
             line-height: 1.7;
+        }
+
+        .bio .tagline {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            line-height: 1.4;
+        }
+
+        .bio .quote {
+            font-style: italic;
+            color: #888;
+            margin: 24px 0;
+        }
+
+        .current-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .current-list li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .current-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #666;
         }
 
         .bio ul {
@@ -83,23 +116,23 @@
             content: "—";
             position: absolute;
             left: 0;
-            color: #999;
+            color: #666;
         }
 
         .bio ul li a {
-            color: #1a1a1a;
+            color: #ffffff;
             text-decoration: none;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #444;
         }
 
         .bio ul li a:hover {
-            border-bottom-color: #1a1a1a;
+            border-bottom-color: #ffffff;
         }
 
         .section-title {
             font-size: 14px;
             font-weight: 500;
-            color: #999;
+            color: #666;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 24px;
@@ -118,11 +151,11 @@
         .blog-list a {
             display: block;
             text-decoration: none;
-            color: #1a1a1a;
+            color: #ffffff;
         }
 
         .blog-list a:hover .blog-title {
-            color: #666;
+            color: #888;
         }
 
         .blog-title {
@@ -134,14 +167,14 @@
 
         .blog-date {
             font-size: 14px;
-            color: #999;
+            color: #666;
         }
 
         footer {
             margin-top: 64px;
             padding-top: 24px;
-            border-top: 1px solid #eee;
-            color: #999;
+            border-top: 1px solid #333;
+            color: #666;
             font-size: 14px;
         }
     </style>
@@ -157,26 +190,27 @@
     <img src="/portrait.jpg" alt="Chris Limberg portrait" class="portrait">
 
     <div class="bio">
-        <p>Chris Limberg is a multidisciplinary maker passionate about bringing useful ideas to life.</p>
+        <p class="tagline">Creative entrepreneur building startups in public.</p>
         
-        <ul>
-            <li>Software engineer building things that matter</li>
-            <li>Learning and growing every day</li>
-            <li>Based in the intersection of technology and creativity</li>
-        </ul>
+        <p>I'm a stakeholder at Acta, a holding company building companies in the open. My work lives at the intersection of creativity, distribution and entrepreneurship.</p>
 
-        <p>Working at the intersection of technology, design, and creative expression, Chris lives by the mantra of "do what excites you most".</p>
+        <p>I build the Acta brand and lead the public positioning of its CEO, Louis Morgner.</p>
+
+        <p>Alongside that, I co-build opencompany across YouTube and Instagram, documenting what it really takes to build in public.</p>
+
+        <p class="quote">Modern startups are not just built with code.<br>They are built with story, attention and belief.</p>
+
+        <p>I build the creative layer that shapes the startups of tomorrow.</p>
     </div>
 
-    <div class="section-title">Recent Writing</div>
+    <div class="section-title">I'm currently</div>
 
-    <ul class="blog-list">
-        <li>
-            <a href="/blog/hello-world">
-                <div class="blog-title">Hello World</div>
-                <div class="blog-date">Feb 19, 2026</div>
-            </a>
-        </li>
+    <ul class="current-list">
+        <li>Building Acta as a public startup brand</li>
+        <li>Leading the personal brand of Louis Morgner</li>
+        <li>Co-building Open Company across YouTube and Instagram</li>
+        <li>Designing creative systems that drive startup growth</li>
+        <li>Growing my own brand in parallel</li>
     </ul>
 
     <footer>
