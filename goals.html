@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icon.jpg" style="border-radius: 50%;">
+    <title>Goals — Chris Limberg</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #0B0B0B;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 48px;
+            padding-top: 20px;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        nav a.active {
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            letter-spacing: -0.5px;
+            text-align: left;
+        }
+
+        .goals-section {
+            margin-bottom: 48px;
+        }
+
+        .goals-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .goals-date {
+            font-size: 12px;
+            color: #444;
+            margin-bottom: 24px;
+        }
+
+        .goal-item {
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .goal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .goal-text {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .goal-stats {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .goal-stats .count {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #222;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #fff;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-marker {
+            position: absolute;
+            top: -4px;
+            width: 2px;
+            height: 12px;
+            background: #ff4444;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .progress-marker:hover {
+            opacity: 1;
+        }
+
+        .progress-marker::after {
+            content: attr(data-date);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            margin-bottom: 8px;
+        }
+
+        .progress-marker:hover::after {
+            opacity: 1;
+        }
+
+        .visionboard-section {
+            text-align: left;
+        }
+
+        .visionboard-section h2 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .visionboard-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 24px;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .post-content {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .post-content p {
+            margin-bottom: 20px;
+            color: #888;
+        }
+
+        footer {
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">home</a>
+        <a href="/blog">blog</a>
+        <a href="/goals.html" class="active">goals</a>
+        <a href="/track-record.html">track record</a>
+    </nav>
+
+    <h1>Goals</h1>
+
+    <div class="goals-section">
+        <div class="goals-title">2026 Progress</div>
+        <div class="goals-date">Last updated: Feb 20, 2026</div>
+        
+        <div class="goal-item">
+            <div class="goal-header">
+                <span class="goal-text">Louis Morgner YouTube</span>
+                <span class="goal-stats"><span class="count">1.26K</span> / 100K</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 1.3%"></div>
+                <div class="progress-marker" style="left: 1.3%" data-date="Feb 20, 2026"></div>
+            </div>
+        </div>
+
+        <div class="goal-item">
+            <div class="goal-header">
+                <span class="goal-text">Chris Limberg YouTube</span>
+                <span class="goal-stats"><span class="count">670</span> / 25K</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 2.7%"></div>
+                <div class="progress-marker" style="left: 2.7%" data-date="Feb 20, 2026"></div>
+            </div>
+        </div>
+
+        <div class="goal-item">
+            <div class="goal-header">
+                <span class="goal-text">Chris Limberg Instagram</span>
+                <span class="goal-stats"><span class="count">1.59K</span> / 25K</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 6.4%"></div>
+                <div class="progress-marker" style="left: 6.4%" data-date="Feb 20, 2026"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="visionboard-section">
+        <h2>Visionboard</h2>
+
+        <img src="/visionboard.jpg" alt="My Visionboard" class="visionboard-image">
+
+        <div class="post-content">
+            <p>I've used visionboards for almost 3 years now.</p>
+
+            <p>It almost always gave me a great look on what, why and how I wanna achieve those "dreams".</p>
+
+            <p>Setting goals is the bridge between dreaming and doing. Without clear goals, visionboards remain just pictures. With goals, they become a roadmap.</p>
+
+            <p>These numbers aren't just metrics. They represent the people I'm trying to reach and impact. Every subscriber is someone who chose to follow this journey. That's the real goal.</p>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="footer-links">
+            <li>© 2026 Chris Limberg</li>
+            <li><a href="https://www.instagram.com/chrislimbergg/" target="_blank" rel="noopener">@chrislimbergg</a></li>
+            <li><a href="https://www.youtube.com/@cryz_yt" target="_blank" rel="noopener">@cryz_yt</a></li>
+            <li><a href="https://www.youtube.com/@louismorgner" target="_blank" rel="noopener">@louismorgner</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icon.jpg" style="border-radius: 50%;">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans,geist Mono@400,500&display=swap" rel="stylesheet">
     <title>Chris Limberg</title>
     <style>
         * {
@@ -15,14 +17,16 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.6;
             color: #ffffff;
-            background: #000000;
-            max-width: 800px;
+            background: #0B0B0B;
+            max-width: 680px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
         }
 
         nav {
             display: flex;
+            justify-content: center;
             gap: 24px;
             margin-bottom: 48px;
             padding-top: 20px;
@@ -46,8 +50,15 @@
         h1 {
             font-size: 32px;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #888;
+            margin-bottom: 32px;
+            font-weight: 400;
         }
 
         .portrait {
@@ -55,12 +66,14 @@
             height: 300px;
             border-radius: 0;
             object-fit: cover;
-            margin-bottom: 32px;
+            margin: 0 auto 32px;
             background: #333;
+            display: block;
         }
 
         .bio {
             margin-bottom: 32px;
+            text-align: left;
         }
 
         .bio p {
@@ -82,9 +95,83 @@
             margin: 24px 0;
         }
 
+        .section-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            margin-top: 48px;
+            text-align: left;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .blog-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .blog-list li {
+            margin-bottom: 24px;
+        }
+
+        .blog-post-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .blog-post-link:hover .blog-post-title {
+            color: #888;
+        }
+
+        .blog-post-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .blog-post-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 6px;
+        }
+
+        .blog-tag {
+            font-family: 'Geist Mono', 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            padding: 3px 8px;
+            background: rgba(255,255,255,0.08);
+            color: #888;
+            border-radius: 12px;
+            text-transform: lowercase;
+        }
+
+        .blog-post-date {
+            font-size: 14px;
+            color: #666;
+        }
+
         .current-list {
             list-style: none;
             padding: 0;
+            text-align: left;
         }
 
         .current-list li {
@@ -101,81 +188,54 @@
             color: #666;
         }
 
-        .bio ul {
+        .socials {
             list-style: none;
             padding: 0;
         }
 
-        .bio ul li {
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
+        .socials li {
+            padding: 4px 0;
         }
 
-        .bio ul li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #666;
-        }
-
-        .bio ul li a {
+        .socials a {
             color: #ffffff;
             text-decoration: none;
-            border-bottom: 1px solid #444;
+            font-size: 16px;
         }
 
-        .bio ul li a:hover {
-            border-bottom-color: #ffffff;
-        }
-
-        .section-title {
-            font-size: 14px;
-            font-weight: 500;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
-            margin-top: 48px;
-        }
-
-        .blog-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .blog-list li {
-            margin-bottom: 24px;
-        }
-
-        .blog-list a {
-            display: block;
-            text-decoration: none;
-            color: #ffffff;
-        }
-
-        .blog-list a:hover .blog-title {
+        .socials a:hover {
             color: #888;
         }
 
-        .blog-title {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 4px;
-            transition: color 0.2s;
-        }
-
-        .blog-date {
-            font-size: 14px;
-            color: #666;
-        }
-
         footer {
-            margin-top: 64px;
+            margin-top: 48px;
             padding-top: 24px;
             border-top: 1px solid #333;
             color: #666;
             font-size: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-links li {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #888;
         }
     </style>
 </head>
@@ -183,16 +243,17 @@
     <nav>
         <a href="/" class="active">home</a>
         <a href="/blog">blog</a>
+        <a href="/goals.html">goals</a>
+        <a href="/track-record.html">track record</a>
     </nav>
 
     <h1>Chris Limberg</h1>
+    <p class="tagline">Creative entrepreneur building startups in public.</p>
 
     <img src="/portrait.jpg" alt="Chris Limberg portrait" class="portrait">
 
     <div class="bio">
-        <p class="tagline">Creative entrepreneur building startups in public.</p>
-        
-        <p>I'm a stakeholder at Acta, a holding company building companies in the open. My work lives at the intersection of creativity, distribution and entrepreneurship.</p>
+        <p>I'm a stakeholder at Acta, a holding company building companies in the open.<br>My work lives at the intersection of creativity, distribution and entrepreneurship.</p>
 
         <p>I build the Acta brand and lead the public positioning of its CEO, Louis Morgner.</p>
 
@@ -203,7 +264,8 @@
         <p>I build the creative layer that shapes the startups of tomorrow.</p>
     </div>
 
-    <div class="section-title">I'm currently</div>
+    <h2 class="section-title">My Work</h2>
+    <p class="section-subtitle">I'm currently</p>
 
     <ul class="current-list">
         <li>Building Acta as a public startup brand</li>
@@ -213,8 +275,41 @@
         <li>Growing my own brand in parallel</li>
     </ul>
 
+    <h2 class="section-title">Writing</h2>
+
+    <ul class="blog-list">
+        <li>
+            <a href="/blog/the-final-gamble.html" class="blog-post-link">
+                <div class="blog-post-title-row">
+                    <div class="blog-post-title">4 months into building a tech startup</div>
+                    <div class="blog-tags">
+                        <span class="blog-tag">work</span>
+                        <span class="blog-tag">learnings</span>
+                    </div>
+                </div>
+                <div class="blog-post-date">Mar 10, 2026</div>
+            </a>
+        </li>
+        <li>
+            <a href="/blog/building-acta.html" class="blog-post-link">
+                <div class="blog-post-title-row">
+                    <div class="blog-post-title">Building Acta</div>
+                    <div class="blog-tags">
+                        <span class="blog-tag">work</span>
+                    </div>
+                </div>
+                <div class="blog-post-date">Feb 20, 2026</div>
+            </a>
+        </li>
+    </ul>
+
     <footer>
-        <p>© 2026 Chris Limberg</p>
+        <ul class="footer-links">
+            <li>© 2026 Chris Limberg</li>
+            <li><a href="https://www.instagram.com/chrislimbergg/" target="_blank" rel="noopener">@chrislimbergg</a></li>
+            <li><a href="https://www.youtube.com/@cryz_yt" target="_blank" rel="noopener">@cryz_yt</a></li>
+            <li><a href="https://www.youtube.com/@louismorgner" target="_blank" rel="noopener">@louismorgner</a></li>
+        </ul>
     </footer>
 </body>
 </html>

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icon.jpg" style="border-radius: 50%;">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans,geist Mono@400,500&display=swap" rel="stylesheet">
     <title>Blog — Chris Limberg</title>
     <style>
         * {
@@ -15,7 +17,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.6;
             color: #ffffff;
-            background: #000000;
+            background: #0B0B0B;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -60,7 +62,9 @@
         }
 
         .blog-list a {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
             color: #ffffff;
         }
@@ -69,11 +73,33 @@
             color: #888;
         }
 
+        .blog-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
         .blog-title {
             font-size: 18px;
             font-weight: 500;
             margin-bottom: 4px;
             transition: color 0.2s;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 6px;
+        }
+
+        .blog-tag {
+            font-family: 'Geist Mono', 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            padding: 3px 8px;
+            background: rgba(255,255,255,0.08);
+            color: #888;
+            border-radius: 12px;
+            text-transform: lowercase;
         }
 
         .blog-date {
@@ -88,27 +114,69 @@
             color: #666;
             font-size: 14px;
         }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #888;
+        }
     </style>
 </head>
 <body>
     <nav>
         <a href="/">home</a>
         <a href="/blog" class="active">blog</a>
+        <a href="/goals.html">goals</a>
+        <a href="/track-record.html">track record</a>
     </nav>
 
     <h1>Blog</h1>
 
     <ul class="blog-list">
         <li>
-            <a href="/blog/hello-world">
-                <div class="blog-title">Hello World</div>
-                <div class="blog-date">Feb 19, 2026</div>
+            <a href="/blog/the-final-gamble.html">
+                <div class="blog-title-row">
+                    <div class="blog-title">4 months into building a tech startup</div>
+                    <div class="blog-tags">
+                        <span class="blog-tag">work</span>
+                        <span class="blog-tag">learnings</span>
+                    </div>
+                </div>
+                <div class="blog-date">Mar 10, 2026</div>
+            </a>
+        </li>
+        <li>
+            <a href="/blog/building-acta.html">
+                <div class="blog-title-row">
+                    <div class="blog-title">Building Acta</div>
+                    <div class="blog-tags">
+                        <span class="blog-tag">work</span>
+                    </div>
+                </div>
+                <div class="blog-date">Feb 20, 2026</div>
             </a>
         </li>
     </ul>
 
     <footer>
-        <p>© 2026 Chris Limberg</p>
+        <ul class="footer-links">
+            <li>© 2026 Chris Limberg</li>
+            <li><a href="https://www.instagram.com/chrislimbergg/" target="_blank" rel="noopener">@chrislimbergg</a></li>
+            <li><a href="https://www.youtube.com/@cryz_yt" target="_blank" rel="noopener">@cryz_yt</a></li>
+            <li><a href="https://www.youtube.com/@louismorgner" target="_blank" rel="noopener">@louismorgner</a></li>
+        </ul>
     </footer>
 </body>
 </html>
